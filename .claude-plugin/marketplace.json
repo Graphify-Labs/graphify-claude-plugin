@@ -1,7 +1,7 @@
 {
   "name": "graphify",
-  "description": "Code knowledge graph plugins from Graphify Labs.",
-  "version": "0.1.0",
+  "description": "Graphify plugins for Claude Code, connecting to Graphify's authenticated MCP server.",
+  "version": "0.1.2",
   "owner": {
     "name": "Graphify Labs",
     "email": "founders@graphify.com",
@@ -11,8 +11,8 @@
     {
       "name": "graphify",
       "source": "./",
-      "description": "Query the code knowledge graph of repositories you have indexed with Graphify.",
-      "category": "Developer tools"
+      "description": "Search indexed code, trace dependencies, assess change impact, and retrieve repository memory through Graphify's authenticated MCP server.",
+      "category": "development"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "name": "graphify",
   "displayName": "Graphify",
-  "version": "0.1.0",
-  "description": "Query the code knowledge graph of repositories you have indexed with Graphify.",
+  "version": "0.1.2",
+  "description": "Search indexed code, trace dependencies, assess change impact, and retrieve repository memory through Graphify's authenticated MCP server.",
   "author": {
     "name": "Graphify Labs",
     "email": "founders@graphify.com",
@@ -13,13 +13,14 @@
   "license": "Apache-2.0",
   "keywords": [
     "graphify",
-    "code knowledge graph",
+    "mcp",
     "code search",
+    "codebase context",
     "dependencies",
     "symbols"
   ],
   "icon": "./assets/logo.png",
-  "documentationUrl": "https://graphify.com",
+  "documentationUrl": "https://docs.graphify.com/integrations/claude-code",
   "supportUrl": "https://graphify.com/contact",
   "privacyPolicyUrl": "https://graphify.com/privacy",
   "termsOfServiceUrl": "https://graphify.com/terms"
