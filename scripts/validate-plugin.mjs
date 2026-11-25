@@ -38,13 +38,13 @@ function requireString(object, key, label) {
   return object[key];
 }
 
-const plugin = readJson(".claude-plugin/plugin.json");
+const PLUGIN_DIR = "plugins/graphify";
+const plugin = readJson(`${PLUGIN_DIR}/.claude-plugin/plugin.json`);
 const marketplace = readJson(".claude-plugin/marketplace.json");
-const mcp = readJson(".mcp.json");
+const mcp = readJson(`${PLUGIN_DIR}/.mcp.json`);
 
 const allowedPluginFields = new Set([
   "name",
-  "displayName",
   "version",
   "description",
   "author",
@@ -53,10 +53,7 @@ const allowedPluginFields = new Set([
   "license",
   "keywords",
   "icon",
-  "documentationUrl",
-  "supportUrl",
   "privacyPolicyUrl",
-  "termsOfServiceUrl",
 ]);
 
 if (plugin) {
@@ -68,7 +65,6 @@ if (plugin) {
   if (plugin.name !== "graphify") {
     fail('plugin.json name must stay "graphify"');
   }
-  requireString(plugin, "displayName", "plugin.json displayName");
   requireString(plugin, "version", "plugin.json version");
   requireString(plugin, "description", "plugin.json description");
   if (plugin.license !== "Apache-2.0") {
@@ -86,7 +82,7 @@ if (plugin) {
   if (!Array.isArray(plugin.keywords) || plugin.keywords.length === 0) {
     fail("plugin.json keywords must be a nonempty array");
   }
-  for (const urlField of ["documentationUrl", "supportUrl", "privacyPolicyUrl", "termsOfServiceUrl"]) {
+  for (const urlField of ["privacyPolicyUrl"]) {
     const value = requireString(plugin, urlField, `plugin.json ${urlField}`);
     if (value && !value.startsWith("https://")) {
       fail(`plugin.json ${urlField} must be an https URL`);
@@ -95,7 +91,7 @@ if (plugin) {
   if (plugin.icon !== "./assets/logo.png") {
     fail('plugin.json icon must be "./assets/logo.png"');
   } else {
-    const logo = path.join(root, "assets/logo.png");
+    const logo = path.join(root, PLUGIN_DIR, "assets/logo.png");
     if (!existsSync(logo) || !statSync(logo).isFile()) {
       fail("assets/logo.png is missing");
     }
@@ -117,8 +113,8 @@ if (marketplace) {
     if (entry.name !== "graphify") {
       fail('marketplace plugin name must be "graphify"');
     }
-    if (entry.source !== "./") {
-      fail('marketplace plugin source must be "./"');
+    if (entry.source !== "./plugins/graphify") {
+      fail('marketplace plugin source must be "./plugins/graphify"');
     }
     requireString(entry, "description", "marketplace plugin description");
   }
@@ -143,7 +139,7 @@ if (mcp) {
   }
 }
 
-const skillPath = path.join(root, "skills/graphify/SKILL.md");
+const skillPath = path.join(root, PLUGIN_DIR, "skills/graphify/SKILL.md");
 if (!existsSync(skillPath)) {
   fail("skills/graphify/SKILL.md is missing");
 } else {

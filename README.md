@@ -1,4 +1,3 @@
-![Graphify](assets/logo.png)
 
 # Graphify
 
@@ -46,7 +45,7 @@ This repository is the Claude Code plugin only.
 
 1. Sign in at [app.graphify.com](https://app.graphify.com), connect a repository you are allowed to use, and wait until indexing finishes.
 2. Install the plugin as above.
-3. When Claude Code asks you to sign in to Graphify, finish the browser prompt and return. There is no API key to paste into this repo. You may need to sign in again when a session expires.
+3. When Claude Code asks you to sign in to Graphify, finish the browser prompt and return. Nothing needs to be pasted into this repo; sign-in happens in the browser. You may need to sign in again when a session expires.
 
 Ask Claude to list your Graphify workspaces and repositories, then name the repository you want. Confirm before it changes workspace. `set_workspace` can change the workspace selected for later sessions.
 

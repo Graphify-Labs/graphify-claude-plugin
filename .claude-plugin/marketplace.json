@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "graphify",
-      "source": "./",
+      "source": "./plugins/graphify",
       "description": "Search indexed code, trace dependencies, assess change impact, and retrieve repository memory through Graphify's authenticated MCP server.",
       "category": "development"
     }
