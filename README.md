@@ -84,7 +84,7 @@ Processing and retention are described in the [privacy policy](https://graphify.
 ## Support
 
 - [Graphify](https://graphify.com) · [Documentation](https://docs.graphify.com/integrations/claude-code)
-- [Contact](https://graphify.com/contact) · [founders@graphify.com](mailto:founders@graphify.com)
+- [Contact](https://graphify.com/contact) · [safi@graphify.com](mailto:safi@graphify.com)
 - [Plugin issues](https://github.com/Graphify-Labs/graphify-claude-plugin/issues)
 
 ## License

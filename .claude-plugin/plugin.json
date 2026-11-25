@@ -5,7 +5,7 @@
   "description": "Search indexed code, trace dependencies, assess change impact, and retrieve repository memory through Graphify's authenticated MCP server.",
   "author": {
     "name": "Graphify Labs",
-    "email": "founders@graphify.com",
+    "email": "safi@graphify.com",
     "url": "https://graphify.com"
   },
   "homepage": "https://graphify.com",
