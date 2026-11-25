@@ -1,6 +1,5 @@
 {
   "name": "graphify",
-  "displayName": "Graphify",
   "version": "0.1.2",
   "description": "Search indexed code, trace dependencies, assess change impact, and retrieve repository memory through Graphify's authenticated MCP server.",
   "author": {
@@ -20,8 +19,5 @@
     "symbols"
   ],
   "icon": "./assets/logo.png",
-  "documentationUrl": "https://docs.graphify.com/integrations/claude-code",
-  "supportUrl": "https://graphify.com/contact",
-  "privacyPolicyUrl": "https://graphify.com/privacy",
-  "termsOfServiceUrl": "https://graphify.com/terms"
+  "privacyPolicyUrl": "https://graphify.com/privacy"
 }

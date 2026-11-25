@@ -36,7 +36,7 @@ The portal reads the public listing from `plugin.json` and `README.md`. Do not t
 | Support contact | safi@graphify.com | Use this on the form. `plugin.json` `supportUrl` is https://graphify.com/contact |
 | Privacy URL | https://graphify.com/privacy | `plugin.json` `privacyPolicyUrl` |
 | Terms URL | https://graphify.com/terms | `plugin.json` `termsOfServiceUrl` |
-| Logo | `assets/logo.png` | `plugin.json` `icon` is `./assets/logo.png`. PNG, 400 by 400, the same file as the Cursor plugin logo |
+| Logo | `plugins/graphify/assets/logo.png` | `plugin.json` `icon` is `./assets/logo.png`. PNG, 400 by 400, the same file as the Cursor plugin logo |
 
 ## Data handling
 
